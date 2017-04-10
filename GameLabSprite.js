@@ -1,12 +1,13 @@
 
-  var createSpriteGL = function(x, y, width, height) {
-  /*
+
+  /*Modification of Code.org GameLab Sprite Object so that it can be used outside of Code.org environment
    * Copied code from p5play from createSprite()
    *
    * NOTE: this param not needed on this.Sprite() call as we're calling
    * through the bound constructor, which prepends the first arg.
    */
   //var p5Inst = this;
+var createSpriteGL = function(x, y, width, height) {
   var s = createSprite(x, y, width, height);
   
   s.setCollider("rectangle",0,0,width,height);
