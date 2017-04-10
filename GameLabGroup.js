@@ -1,7 +1,5 @@
-var createGroupGL = function () {
-  var array = Group();
 
-  /*
+  /*  Modification of Code.org GameLab Group Object so that it can be used outside of Code.org environment
    * Create new helper called _groupCollideGameLab() which can be called as a
    * stateful nativeFunc by the interpreter. This enables the native method tozom
    * be called multiple times so that it can go asynchronous every time it
@@ -47,6 +45,10 @@ var createGroupGL = function () {
    * @param {Object} target Group or Sprite
    * @return {boolean} True if any touching occurred
    */
+
+var createGroupGL = function () {
+  var array = Group();
+
   array.isTouching = function (target) {
   //  console.log(this+"group isTouching target"+target);
     return this.overlap(target);
