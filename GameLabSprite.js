@@ -6,9 +6,21 @@
    * NOTE: this param not needed on this.Sprite() call as we're calling
    * through the bound constructor, which prepends the first arg.
    */
+
+
+  var createSpriteGL = function(x, y, width, height) {
+  /*
+   * Copied code from p5play from createSprite()
+   *
+   * NOTE: this param not needed on this.Sprite() call as we're calling
+   * through the bound constructor, which prepends the first arg.
+   */
   //var p5Inst = this;
-var createSpriteGL = function(x, y, width, height) {
   var s = createSprite(x, y, width, height);
+    
+ //   s.debug=1;
+ //   s.mouseActive = true;
+
   
   s.setCollider("rectangle",0,0,width,height);
 
@@ -480,7 +492,7 @@ function addMethodAliases(sprite) {
 }
 
 var randomNumber = function(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.round(Math.random() * (max - min) + min);
 };
 
 var rgb = function (r,g,b)
@@ -490,6 +502,8 @@ var mousePressedOver = function (sprite) {
  //   console.log("mouse is over: "+sprite.mouseIsPressed+ " " +sprite.mouseIsOver) ;
     return sprite.mouseIsPressed && sprite.mouseIsOver;
 };
+
+
 
 
 
